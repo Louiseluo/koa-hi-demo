@@ -1,11 +1,10 @@
-import Koa from "koa"
+import Koa from 'koa'
+import router from './routes/api'
 
-const app = new Koa()
+const app = new Koa();
 
-app.use(async ctx => {
-  ctx.body = 'Hello World s'
-});
+app.use(router.routes(), router.allowedMethods())
 
-app.listen(3000)
+app.listen(3002);
 
-console.log('run on 3000 port')
+console.log('run 3002')

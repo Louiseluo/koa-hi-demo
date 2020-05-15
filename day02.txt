@@ -1,0 +1,13 @@
+1、context （上下文）eg:ctx
+    request->response
+    response->request
+2、middleWare（中间件）eg:app.use()
+    a、前置中间件
+        在next()之前处理数据
+    
+    b、后置中间件
+        在next()之后处理数据
+
+    c、中间件都是异步请求，async await next(),next()指的是下一个中间件（app.use()）
+3、router（路由）
+    
