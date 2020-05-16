@@ -10,4 +10,7 @@
 
     c、中间件都是异步请求，async await next(),next()指的是下一个中间件（app.use()）
 3、router（路由）
-    
+    a、分模块创建文件，集合到index.js 统一导入 entry index.js
+    ->modules file:    import router from 'koa-router' -> router.get('url'....)
+    ->router index.js: import modules form './modules'-> router.use(modules)
+    ->app index        import 
