@@ -7,7 +7,7 @@ router.get('/user/id/:id', async (ctx) => {
     ctx.body = ctx.request.query
 })
 
-router.get('/user/info', UserController.info)
+router.get('/user/info', UserController.info.bind(UserController))
 
 /**
  * 列表接口 list index
@@ -33,5 +33,11 @@ router.put('/user/update', UserController.update)
  * 删除接口 delete
  */
 router.delete('/user/delete', UserController.delete)
+
+router.get('/users', UserController.list)
+router.get('/users/:id', UserController.detail)
+router.post('/users', UserController.create)
+router.put('/users/:id', UserController.update)
+router.delete('/users/:id', UserController.delete)
 
 export default router

@@ -1,13 +1,18 @@
 import BaseController from './base'
+import OutPut from '../utils/output'
+import config from '../config'
 
 class UserController extends BaseController {
 
-    init() {
-        this.info.bind(this)
-    }
-
+    /**
+     * 
+     * @param {import('koa').Context} ctx 
+     */
+    // 方法下参数自动补全
     async info(ctx) {
-        ctx.body = 'info'
+        ctx.body = ctx.request.params
+//         ctx.type = config.responseType
+//         ctx.body = OutPut.apiSuccess({'username':'louise123'},'success',200)
     }
 
     async index(ctx) {
@@ -25,7 +30,7 @@ class UserController extends BaseController {
     }
 
     async create(ctx) {
-        ctx.body = 'create'
+        ctx.body = ctx.request.query
     }
 
     async update(ctx) {

@@ -1,7 +1,10 @@
 import Koa from 'koa'
 import router from './routes'
+import config from './config'
 
 const app = new Koa();
+
+app.appName = config.appName
 
 app.use(router.routes(), router.allowedMethods())
 
