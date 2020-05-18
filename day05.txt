@@ -1,0 +1,6 @@
+1、mvc
+    controller 专门处理router接近的code，
+    
+    service 处理业务逻辑，// 介于控制器与model层之间：业务逻辑抽离单独处理，抽出model，或是controller 臃肿业务逻辑
+    model直接处理数据库数据 
+2、模板引擎 ？？？
